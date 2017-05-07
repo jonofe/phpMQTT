@@ -8,7 +8,7 @@ CREATE PROCEDURE mqtt_publish(typ CHAR(255), ga CHAR(255), name CHAR(255), value
 BEGIN
  DECLARE cmd CHAR(255);
  DECLARE result CHAR(255);
- SET cmd = CONCAT('/usr/bin/php /usr/local/edomi/www/admin/lbs/mqtt.php ',typ,' ',ga,' "',name,'" "',value,'"');
+ SET cmd = CONCAT('/usr/bin/php /usr/local/edomi/www/data/liveproject/lbs/EXE19001051.php ',typ,' ',ga,' "',name,'" "',value,'"');
  SET result = sys_exec(cmd);
 END;
 $$
